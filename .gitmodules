@@ -1,0 +1,6 @@
+[submodule "app"]
+	path = app
+	url = https://github.com/erfanmola/contonest-app.git
+[submodule "backend"]
+	path = backend
+	url = https://github.com/erfanmola/contonest-backend.git
