@@ -26,13 +26,13 @@ Contonest is a **Telegram-integrated contest platform** built with a modern **So
 
 The full documentation is available via our **VitePress site**:
 
-- **[Introduction](docs/intro.md)** – Project overview, aims, and general features.
+- **[Introduction](https://contonest.pages.dev/intro.html)** – Project overview, aims, and general features.
 - **Frontend**
-   - [Stack](docs/frontend/stack.md) – Libraries, frameworks, and tooling used in the frontend.
-   - [Setup](docs/frontend/setup.md) – How to install, run, and deploy the frontend.
+   - [Stack](https://contonest.pages.dev/frontend/stack.html) – Libraries, frameworks, and tooling used in the frontend.
+   - [Setup](https://contonest.pages.dev/frontend/setup.html) – How to install, run, and deploy the frontend.
 - **Backend**
-   - [Stack](docs/backend/stack.md) – Libraries, frameworks, and architecture for the backend.
-   - [Setup](docs/backend/setup.md) – How to install, run, and deploy the backend, including Docker usage.
+   - [Stack](https://contonest.pages.dev/backend/stack.html) – Libraries, frameworks, and architecture for the backend.
+   - [Setup](https://contonest.pages.dev/backend/setup.html) – How to install, run, and deploy the backend, including Docker usage.
 
 ---
 
