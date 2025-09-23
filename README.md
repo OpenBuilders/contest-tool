@@ -1,6 +1,6 @@
 # 🏆 Contonest
 
-![](.github/docs/Contonest.gif)
+![](https://raw.githubusercontent.com/erfanmola/Contonest/master/docs/Contonest.gif)
 
 Contonest is a **Telegram-integrated contest platform** built with a modern **SolidJS frontend** and a **TypeScript + Bun backend**. It allows you to create, manage, and participate in contests with privacy, flexible rewards, and deep Telegram ecosystem integration.
 
