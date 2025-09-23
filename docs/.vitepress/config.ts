@@ -5,18 +5,27 @@ export default defineConfig({
 	title: "Contonest",
 	description: "Documentations & Setup Guide",
 	themeConfig: {
-		// https://vitepress.dev/reference/default-theme-config
-		nav: [
-			{ text: "Home", link: "/" },
-			{ text: "Examples", link: "/markdown-examples" },
-		],
+		nav: [{ text: "Home", link: "/" }],
 
 		sidebar: [
 			{
-				text: "Examples",
+				text: "Introduction",
+				items: [{ text: "Overview", link: "/intro.md" }],
+			},
+			{
+				text: "Frontend",
+				collapsible: true,
 				items: [
-					{ text: "Markdown Examples", link: "/markdown-examples" },
-					{ text: "Runtime API Examples", link: "/api-examples" },
+					{ text: "Stack", link: "/frontend/stack.md" },
+					{ text: "Setup", link: "/frontend/setup.md" },
+				],
+			},
+			{
+				text: "Backend",
+				collapsible: true,
+				items: [
+					{ text: "Stack", link: "/backend/stack.md" },
+					{ text: "Setup", link: "/backend/setup.md" },
 				],
 			},
 		],

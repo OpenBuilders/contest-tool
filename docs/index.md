@@ -15,18 +15,21 @@ hero:
    actions:
       - theme: brand
         text: Get Started
-        link: /getting-started
+        link: /intro
       - theme: alt
-        text: API Reference
-        link: /api
+        text: Contonest Bot
+        link: https://t.me/ContonestBot
 
 features:
-   - title: 🕵️ Anonymous Participation
-     details: Organizers can enable an anonymous mode where participants join with auto-generated identities featuring unique colors, names, and icons.
-   - title: 🎨 Contest Customization
-     details: Personalize each contest with custom backdrops and symbolic icons—similar to Telegram gifts—for a familiar, polished Telegram look.
-   - title: 💎 Free or TON-Powered Contests
-     details: Run free contests or require an entry fee in TON with secure, seamless payments.
-   - title: 👥 Moderator Controls
-     details: Add trusted moderators to manage entries, review submissions, and ensure fair play.
+   - title: 🕵️ Anonymous & Fair Participation
+     details: Participants real identities are hidden from moderators, who see only anonymized aliases, ensuring unbiased judging while owners retain full visibility.
+
+   - title: ⚡ Easy Contest Creation
+     details: Quickly create contests in a few steps via the Mini App or Telegram bot, with options for free or TON-entry contests.
+
+   - title: 🎨 Customizable Contests
+     details: Personalize contests with themed backdrops and symbolic icons for a polished, Telegram-native appearance.
+
+   - title: 👥 Trusted Moderation
+     details: Invite moderators to review entries and manage submissions, with participant privacy preserved through anonymized identities.
 ---
