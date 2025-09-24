@@ -1,6 +1,6 @@
 [submodule "app"]
 	path = app
-	url = https://github.com/erfanmola/contonest-app.git
+	url = https://github.com/OpenBuilders/contest-app.git
 [submodule "backend"]
 	path = backend
-	url = https://github.com/erfanmola/contonest-backend.git
+	url = https://github.com/OpenBuilders/contest-backend.git
