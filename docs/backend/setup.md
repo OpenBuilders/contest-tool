@@ -32,7 +32,6 @@ API_HOST=
 API_PORT=
 API_AUTH_TTL=
 API_JWT_SECRET=
-WEBHOOK_SECRET=
 API_VERSION=
 
 MINIAPP_URL=
@@ -40,6 +39,12 @@ MINIAPP_SLUG=
 
 MASTER_WALLET=
 COVER_ARCHIVE_CHAT_ID=
+
+TELEGRAM_API_ID=
+TELEGRAM_API_HASH=
+
+WEBHOOK_SECRET=
+WEBHOOK_URL=
 ```
 
 > ⚠️ Replace each value with your own configuration.
@@ -94,18 +99,22 @@ services:
       build: .
       container_name: contonest-backend
       restart: unless-stopped
-      ports:
-         - "3000:3000"
       env_file:
          - ".env.docker"
       depends_on:
-         - db
-         - redis
+         db:
+            condition: service_healthy
+         redis:
+            condition: service_healthy
       volumes:
-         - ./storage/images:/app/storage/images
+         - image-storage:/app/storage/images
+         - cover-storage:/app/storage/covers
+         - telegram-bot-api-data:/var/lib/telegram-bot-api
+      ports:
+         - "9092:9092"
 
    db:
-      image: mysql:8.0
+      image: mariadb:10.11.14
       container_name: contonest-mysql
       restart: unless-stopped
       environment:
@@ -113,6 +122,21 @@ services:
          MYSQL_DATABASE: ${MYSQL_NAME}
          MYSQL_USER: ${MYSQL_USER}
          MYSQL_PASSWORD: ${MYSQL_PASS}
+      healthcheck:
+         test:
+            [
+               "CMD",
+               "mysqladmin",
+               "ping",
+               "-h",
+               "localhost",
+               "-u",
+               "${MYSQL_USER}",
+               "--password=${MYSQL_PASS}",
+            ]
+         interval: 10s
+         timeout: 5s
+         retries: 5
       volumes:
          - mysql_data:/var/lib/mysql
          - ./database.sql:/docker-entrypoint-initdb.d/init.sql:ro
@@ -121,13 +145,36 @@ services:
       image: redis:7-alpine
       container_name: contonest-redis
       restart: unless-stopped
+      healthcheck:
+         test: ["CMD", "redis-cli", "ping"]
+         interval: 5s
+         timeout: 3s
+         retries: 5
       volumes:
          - redis_data:/data
       command: ["redis-server", "--appendonly", "yes"]
 
+   telegram-bot-api:
+      image: aiogram/telegram-bot-api:latest
+      restart: unless-stopped
+      environment:
+         TELEGRAM_API_ID: ${TELEGRAM_API_ID}
+         TELEGRAM_API_HASH: ${TELEGRAM_API_HASH}
+         TELEGRAM_HTTP_PORT: 9091
+         TELEGRAM_LOCAL: true
+      volumes:
+         - image-storage:/app/storage/images
+         - cover-storage:/app/storage/covers
+         - telegram-bot-api-data:/var/lib/telegram-bot-api
+      ports:
+         - "9091:9091"
+
 volumes:
    mysql_data:
    redis_data:
+   telegram-bot-api-data:
+   image-storage:
+   cover-storage:
 ```
 
 - Build and run:
