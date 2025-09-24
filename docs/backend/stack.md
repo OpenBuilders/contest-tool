@@ -20,8 +20,8 @@ Contonest’s backend is a **single TypeScript codebase** that powers both the T
 
 ## Database & Caching
 
-- **MySQL** – Stores contests, users, settings, and submissions.
-- **Kysely** – Type-safe SQL query builder for MySQL.
+- **PostgreSQL** – Stores contests, users, settings, and submissions.
+- **Kysely** – Type-safe SQL query builder for PostgreSQL.
 - **Redis** – Caching and broadcast channels, with connection pooling via **generic-pool**.
 - **Database SQL file** – `database.sql` provides all required table structures for setup.
 
@@ -46,7 +46,7 @@ Contonest’s backend is a **single TypeScript codebase** that powers both the T
 ## Search & Utilities
 
 - **fuse.js** – Fuzzy search for contests and submissions.
-- **generic-pool** – Manages MySQL and Redis connection pools.
+- **generic-pool** – Manages PostgreSQL and Redis connection pools.
 
 ---
 

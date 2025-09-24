@@ -17,13 +17,13 @@ BOT_ADMIN_ID=
 BOT_API_SERVER=
 
 POOL_SIZE_REDIS=
-POOL_SIZE_MYSQL=
+POOL_SIZE_PGSQL=
 
-MYSQL_USER=
-MYSQL_NAME=
-MYSQL_PASS=
-MYSQL_HOST=
-MYSQL_PORT=
+PGSQL_NAME=
+PGSQL_USER=
+PGSQL_PASS=
+PGSQL_HOST=
+PGSQL_PORT=
 
 REDIS_HOST=
 REDIS_PORT=
@@ -77,21 +77,21 @@ with `secret_token` = `WEBHOOK_SECRET`.
 
 4. **Database setup**:
 
-- Install MySQL and Redis.
-- Import `database.sql` into MySQL:
+- Install PostgreSQL and Redis.
+- Import `database.sql` into PostgreSQL:
 
 ```bash
-mysql -u MYSQL_USER -p MYSQL_NAME < database.sql
+psql -U POSTGRES_USER -d POSTGRES_DB -f database.sql
 ```
 
-- Ensure MySQL and Redis are running.
+- Ensure PostgreSQL and Redis are running.
 
 ---
 
 ## Docker Deployment (Optional)
 
 Docker is supported but **not recommended** due to complexity.
-Ensure **persistent volumes** for images and MySQL:
+Ensure **persistent volumes** for images and PostgreSQL:
 
 ```yaml
 services:
@@ -114,31 +114,20 @@ services:
          - "9092:9092"
 
    db:
-      image: mariadb:10.11.14
-      container_name: contonest-mysql
+      image: postgres:17
+      container_name: contonest-postgres
       restart: unless-stopped
       environment:
-         MYSQL_ROOT_PASSWORD: ${MYSQL_PASS}
-         MYSQL_DATABASE: ${MYSQL_NAME}
-         MYSQL_USER: ${MYSQL_USER}
-         MYSQL_PASSWORD: ${MYSQL_PASS}
+         POSTGRES_USER: ${PGSQL_USER}
+         POSTGRES_PASSWORD: ${PGSQL_PASS}
+         POSTGRES_DB: ${PGSQL_NAME}
       healthcheck:
-         test:
-            [
-               "CMD",
-               "mysqladmin",
-               "ping",
-               "-h",
-               "localhost",
-               "-u",
-               "${MYSQL_USER}",
-               "--password=${MYSQL_PASS}",
-            ]
+         test: ["CMD-SHELL", "pg_isready -U ${PGSQL_USER}"]
          interval: 10s
          timeout: 5s
          retries: 5
       volumes:
-         - mysql_data:/var/lib/mysql
+         - postgres_data:/var/lib/postgresql/data
          - ./database.sql:/docker-entrypoint-initdb.d/init.sql:ro
 
    redis:
@@ -170,7 +159,7 @@ services:
          - "9091:9091"
 
 volumes:
-   mysql_data:
+   postgres_data:
    redis_data:
    telegram-bot-api-data:
    image-storage:
@@ -183,7 +172,7 @@ volumes:
 docker compose up --build
 ```
 
-> Make sure `storage/images` and MySQL volumes are persistent to avoid data loss.
+> Make sure `storage/images` and PostgreSQL volumes are persistent to avoid data loss.
 
 ---
 
