@@ -18,7 +18,6 @@ VITE_PLAUSIBLE_API=
 VITE_PLAUSIBLE_DOMAIN=
 VITE_BOT_USERNAME=
 VITE_MINIAPP_SLUG=
-VITE_MASTER_WALLET=
 ```
 
 > ⚠️ Replace each value with your own configuration.
