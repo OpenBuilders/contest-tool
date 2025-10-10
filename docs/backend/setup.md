@@ -45,6 +45,9 @@ TELEGRAM_API_HASH=
 
 WEBHOOK_SECRET=
 WEBHOOK_URL=
+
+TON_CLIENT_ENDPOINT_URL=
+TON_CLIENT_API_KEY=
 ```
 
 > ⚠️ Replace each value with your own configuration.
