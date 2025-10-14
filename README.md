@@ -1,6 +1,6 @@
 # 🏆 Contests Tool
 
-![](https://raw.githubusercontent.com/erfanmola/OpenBuilders/contest-tool/docs/Demo.gif)
+![](https://raw.githubusercontent.com/OpenBuilders/contest-tool/docs/Demo.gif)
 
 Contests Tool is a **Telegram-integrated contest platform** built with a modern **SolidJS frontend** and a **TypeScript + Bun backend**. It allows you to create, manage, and participate in contests with privacy, flexible rewards, and deep Telegram ecosystem integration.
 
