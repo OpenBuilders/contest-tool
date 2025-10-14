@@ -26,13 +26,13 @@ Contests Tool is a **Telegram-integrated contest platform** built with a modern 
 
 The full documentation is available via our **VitePress site**:
 
-- **[Introduction](https://contonest.pages.dev/intro.html)** – Project overview, aims, and general features.
+- **[Introduction](https://docs.contest.tools.tg/intro.html)** – Project overview, aims, and general features.
 - **Frontend**
-   - [Stack](https://contonest.pages.dev/frontend/stack.html) – Libraries, frameworks, and tooling used in the frontend.
-   - [Setup](https://contonest.pages.dev/frontend/setup.html) – How to install, run, and deploy the frontend.
+   - [Stack](https://docs.contest.tools.tg/frontend/stack.html) – Libraries, frameworks, and tooling used in the frontend.
+   - [Setup](https://docs.contest.tools.tg/frontend/setup.html) – How to install, run, and deploy the frontend.
 - **Backend**
-   - [Stack](https://contonest.pages.dev/backend/stack.html) – Libraries, frameworks, and architecture for the backend.
-   - [Setup](https://contonest.pages.dev/backend/setup.html) – How to install, run, and deploy the backend, including Docker usage.
+   - [Stack](https://docs.contest.tools.tg/backend/stack.html) – Libraries, frameworks, and architecture for the backend.
+   - [Setup](https://docs.contest.tools.tg/backend/setup.html) – How to install, run, and deploy the backend, including Docker usage.
 
 ---
 

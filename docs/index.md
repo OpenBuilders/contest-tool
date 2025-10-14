@@ -18,7 +18,7 @@ hero:
         link: /intro
       - theme: alt
         text: Contests Tool Bot
-        link: https://t.me/ContonestBot
+        link: https://t.me/contests_app_bot
 
 features:
    - title: 🕵️ Anonymous & Fair Participation
