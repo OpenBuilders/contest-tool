@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-	title: "Contonest",
+	title: "Contests Tool",
 	description: "Documentations & Setup Guide",
 	themeConfig: {
 		nav: [{ text: "Home", link: "/" }],
@@ -31,7 +31,7 @@ export default defineConfig({
 		],
 
 		socialLinks: [
-			{ icon: "github", link: "https://github.com/erfanmola/Contonest" },
+			{ icon: "github", link: "https://github.com/OpenBuilders/contest-tool" },
 		],
 	},
 });

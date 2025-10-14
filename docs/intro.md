@@ -3,14 +3,14 @@ title: Introduction
 outline: deep
 ---
 
-# Contonest
+# Contests Tool
 
-Contonest is a **Telegram-native contest platform** that allows anyone to easily create and participate in contests directly inside Telegram.
+Contests Tool is a **Telegram-native contest platform** that allows anyone to easily create and participate in contests directly inside Telegram.
 It provides a familiar, fast, and privacy-focused experience that fits naturally into the Telegram ecosystem.
 
 ## Project Vision
 
-Contonest’s goal is to make organizing contests as effortless as possible while ensuring **fairness** and **privacy** for all participants.
+Contests Tool’s goal is to make organizing contests as effortless as possible while ensuring **fairness** and **privacy** for all participants.
 
 - **Effortless** – create a contest in just a few simple steps.
 - **Integrated** – deep Telegram integration for seamless interaction.
@@ -37,7 +37,7 @@ Contonest’s goal is to make organizing contests as effortless as possible whil
 
 ## Tech Overview
 
-Contonest is built as a **fullstack Telegram application**:
+Contests Tool is built as a **fullstack Telegram application**:
 
 - **Frontend** – a modern web-based Mini App providing a responsive, Telegram-style interface.
 - **Backend** – a scalable API powering contest creation, participation, and secure payments.

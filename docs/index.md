@@ -2,22 +2,22 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
-title: "Contonest Documentation"
-description: "Official documentation for Contonest – a Telegram-based platform for creating, hosting, and participating in public or private contests with anonymity, TON payments, and more."
+title: "Contests Tool Documentation"
+description: "Official documentation for Contests Tool – a Telegram-based platform for creating, hosting, and participating in public or private contests with anonymity, TON payments, and more."
 
 hero:
-   name: "Contonest"
+   name: "Contests Tool"
    text: "Documentation"
    tagline: "Create, host, and join contests on Telegram with ease."
    image:
-      src: https://raw.githubusercontent.com/erfanmola/Contonest/master/docs/Contonest.png
-      alt: Contonest
+      src: https://raw.githubusercontent.com/OpenBuilders/contest-tool/master/docs/Demo.png
+      alt: Contests Tool
    actions:
       - theme: brand
         text: Get Started
         link: /intro
       - theme: alt
-        text: Contonest Bot
+        text: Contests Tool Bot
         link: https://t.me/ContonestBot
 
 features:

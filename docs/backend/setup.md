@@ -4,7 +4,7 @@ title: Backend Setup
 
 # Backend Setup Guide
 
-This guide explains how to set up the Contonest backend for **local development** or **production**.
+This guide explains how to set up the Contests Tool backend for **local development** or **production**.
 
 ## Environment Variables
 
@@ -100,7 +100,7 @@ Ensure **persistent volumes** for images and PostgreSQL:
 services:
    backend:
       build: .
-      container_name: contonest-backend
+      container_name: contests-tool-backend
       restart: unless-stopped
       env_file:
          - ".env.docker"
@@ -115,10 +115,16 @@ services:
          - telegram-bot-api-data:/var/lib/telegram-bot-api
       ports:
          - "9092:9092"
+      healthcheck:
+         test: ["CMD", "curl", "-f", "http://backend:9092/health"]
+         interval: 30s
+         timeout: 5s
+         retries: 3
+         start_period: 10s
 
    db:
       image: postgres:17
-      container_name: contonest-postgres
+      container_name: contests-tool-postgres
       restart: unless-stopped
       environment:
          POSTGRES_USER: ${PGSQL_USER}
@@ -131,11 +137,10 @@ services:
          retries: 5
       volumes:
          - postgres_data:/var/lib/postgresql/data
-         - ./database.sql:/docker-entrypoint-initdb.d/init.sql:ro
 
    redis:
       image: redis:7-alpine
-      container_name: contonest-redis
+      container_name: contests-tool-redis
       restart: unless-stopped
       healthcheck:
          test: ["CMD", "redis-cli", "ping"]

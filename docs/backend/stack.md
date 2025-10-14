@@ -4,7 +4,7 @@ title: Backend Stack
 
 # Backend Stack
 
-Contonest’s backend is a **single TypeScript codebase** that powers both the Telegram bot and the Mini App API. It’s built using **Bun** for fast execution, with a focus on lightweight, maintainable, and highly performant architecture.
+Contests Tool’s backend is a **single TypeScript codebase** that powers both the Telegram bot and the Mini App API. It’s built using **Bun** for fast execution, with a focus on lightweight, maintainable, and highly performant architecture.
 
 ## Core Framework & Language
 
@@ -14,7 +14,7 @@ Contonest’s backend is a **single TypeScript codebase** that powers both the T
 
 ## Telegram & Bot Integration
 
-- **nyx-bot-client** – Custom Telegram bot library developed exclusively for Contonest.
+- **nyx-bot-client** – Custom Telegram bot library developed exclusively for Contests Tool.
 - Supports both **Local Bot API server** and **official api.telegram.org**, with local file (`file://`) handling for better compatibility.
 - Uses `WEBHOOK_SECRET` to secure webhooks at `/bot-webhook`.
 
@@ -50,4 +50,4 @@ Contonest’s backend is a **single TypeScript codebase** that powers both the T
 
 ---
 
-This stack ensures Contonest’s backend is **secure, efficient, and fully integrated with Telegram**, supporting payments, dynamic content generation, and smooth Mini App operation.
+This stack ensures Contests Tool’s backend is **secure, efficient, and fully integrated with Telegram**, supporting payments, dynamic content generation, and smooth Mini App operation.

@@ -4,7 +4,7 @@ title: Frontend Stack
 
 # Frontend Stack
 
-Contonest’s frontend is built on **SolidJS**, avoiding unnecessary React complexities to ensure **small bundle sizes** and fast performance. The entire project is written in **TypeScript** for type safety and maintainability.
+Contests Tool’s frontend is built on **SolidJS**, avoiding unnecessary React complexities to ensure **small bundle sizes** and fast performance. The entire project is written in **TypeScript** for type safety and maintainability.
 
 ## Core Framework
 
@@ -54,4 +54,4 @@ Contonest’s frontend is built on **SolidJS**, avoiding unnecessary React compl
 
 ---
 
-This stack ensures Contonest’s frontend is **fast, compact, and Telegram-native**, while supporting **rich content, animations, and secure payments**.
+This stack ensures Contests Tool’s frontend is **fast, compact, and Telegram-native**, while supporting **rich content, animations, and secure payments**.

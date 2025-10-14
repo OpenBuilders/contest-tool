@@ -4,7 +4,7 @@ title: Frontend Setup
 
 # Frontend Setup Guide
 
-This guide explains how to set up the Contonest frontend for **development**, **production builds**, and **deployment**.
+This guide explains how to set up the Contests Tool frontend for **development**, **production builds**, and **deployment**.
 
 ## Environment Variables
 
@@ -62,13 +62,13 @@ We provide a Dockerfile that installs dependencies, builds the project, and serv
 **Build the Docker image:**
 
 ```bash
-docker build -t contonest-frontend .
+docker build -t contests-tool-frontend .
 ```
 
 **Run the container:**
 
 ```bash
-docker run -p 80:80 contonest-frontend
+docker run -p 80:80 contests-tool-frontend
 ```
 
 The frontend will be accessible at `http://localhost` (or your server IP).

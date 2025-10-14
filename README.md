@@ -1,8 +1,8 @@
-# 🏆 Contonest
+# 🏆 Contests Tool
 
-![](https://raw.githubusercontent.com/erfanmola/Contonest/master/docs/Contonest.gif)
+![](https://raw.githubusercontent.com/erfanmola/OpenBuilders/contest-tool/docs/Demo.gif)
 
-Contonest is a **Telegram-integrated contest platform** built with a modern **SolidJS frontend** and a **TypeScript + Bun backend**. It allows you to create, manage, and participate in contests with privacy, flexible rewards, and deep Telegram ecosystem integration.
+Contests Tool is a **Telegram-integrated contest platform** built with a modern **SolidJS frontend** and a **TypeScript + Bun backend**. It allows you to create, manage, and participate in contests with privacy, flexible rewards, and deep Telegram ecosystem integration.
 
 ---
 
@@ -38,7 +38,7 @@ The full documentation is available via our **VitePress site**:
 
 ## Contributing
 
-Contributions are welcome! Please submit pull requests or open issues on [GitHub](https://github.com/erfanmola/Contonest).
+Contributions are welcome! Please submit pull requests or open issues on [GitHub](https://github.com/OpenBuilders/contest-tool).
 
 ---
 
@@ -48,4 +48,4 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## Acknowledgements
 
-- Contonest is developed and maintained by independent developers and [Open Builders](https://github.com/openbuilders)
+- Contests Tool is developed and maintained by independent developers and [Open Builders](https://github.com/openbuilders)
