@@ -10,7 +10,7 @@ hero:
    text: "Documentation"
    tagline: "Create, host, and join contests on Telegram with ease."
    image:
-      src: https://raw.githubusercontent.com/OpenBuilders/contest-tool/master/docs/Demo.png
+      src: https://raw.githubusercontent.com/OpenBuilders/contest-tool/refs/heads/master/docs/Demo.png
       alt: Contests Tool
    actions:
       - theme: brand
