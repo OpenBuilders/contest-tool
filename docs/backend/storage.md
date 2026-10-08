@@ -4,7 +4,7 @@ title: Upload Storage
 
 # Upload storage and migration
 
-Local storage remains the default. Set `STORAGE_DRIVER=s3` to use a private S3-compatible bucket for API uploads, bot uploads, image serving and generated covers. Existing database image IDs and image URLs are preserved; no database migration is needed. Fonts and symbols remain bundled read-only assets. Telegram downloads still use the local Bot API server's file cache.
+Local storage remains the default. Set `STORAGE_DRIVER=s3` to use a private S3-compatible bucket for API uploads, bot uploads, image serving, generated covers and the welcome animation. Existing database image IDs and image URLs are preserved; no database migration is needed. Fonts and symbols remain bundled read-only assets. Telegram downloads still use the local Bot API server's file cache.
 
 Use Bun 1.3.2 or newer. Configure the backend environment:
 
@@ -20,7 +20,7 @@ STORAGE_S3_ENDPOINT=https://your-s3-endpoint
 STORAGE_S3_PREFIX=contests
 ```
 
-Keep the bucket private. Credentials need GetObject, PutObject and DeleteObject on the configured prefix. Telegram must be able to reach the bucket endpoint: covers use a signed GET URL valid for one hour and are deleted after sendPhoto completes. Configure lifecycle cleanup for old `covers/` objects left by process crashes. Image and cover volumes are unnecessary in bucket mode.
+Keep the bucket private. Credentials need GetObject, PutObject and DeleteObject on the configured prefix. Telegram must be able to reach the bucket endpoint: covers and the welcome animation use signed GET URLs valid for one hour. Temporary objects are deleted after the Bot API finishes sending them. Configure lifecycle cleanup for old `covers/` objects left by process crashes. Image and cover volumes are unnecessary in bucket mode.
 
 ## Cutover
 
